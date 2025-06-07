@@ -1,0 +1,69 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-image: url("../img/fondo.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+.form-codigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.input-codigo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+}
+
+.input-codigo label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.input-codigo input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid white;
+    width: 500px;
+}
+
+.boton-enviar {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    border: none;
+    background-color: white;
+    width: 500px;
+}
