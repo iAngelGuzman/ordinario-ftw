@@ -64,7 +64,7 @@ async function cargarTabla(xml, url = false) {
             const apariencia = `
                 <div class="apariencia">
                     <div class="color">
-                        <i class="fa-solid fa-person"></i>
+                        <i class="fa-solid fa-hat-cowboy"></i>
                         <span style="background-color: ${cabello};"></span>
                     </div>
                     <div class="color">
