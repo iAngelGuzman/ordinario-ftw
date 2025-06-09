@@ -1,0 +1,185 @@
+input, select {
+    border-radius: .5rem;
+    border: solid 1px lightgrey;
+    box-shadow: 0 0 2px rgb(0, 0, 0, 0.2);
+    padding: 0.5rem;
+    color: black;
+    letter-spacing: 0.02rem;
+    font-size: .9rem;
+}
+input[type="color"],
+input[type="color"]::-webkit-color-swatch-wrapper,
+input[type="color"]::-webkit-color-swatch {
+    border: 0;
+    padding: 0;
+    border-radius: .8rem;
+}
+input[type="color"]::-moz-color-swatch,
+input[type="color"]::-moz-focus-inner {
+    border: none !important;
+    outline: none;
+}
+input[type="color"] {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.datos {
+    margin-bottom: 1rem;
+}
+
+.datos-nombre, .datos-clase {
+    display: flex;
+    align-items: center;
+    border: solid 1px lightgray;
+    border-radius: .5rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+.datos-nombre label, .datos-clase label {
+    padding-left: .6rem;
+    padding-bottom: .1rem;
+    margin-right: .4rem;
+}
+.datos-nombre input, .datos-clase select {
+    flex: 1;
+    border: 0;
+    border-left: 1px solid lightgray;
+    padding: 0.6rem .8rem;
+}
+.datos-clase select {
+    background-color: white;
+}
+.datos-nombre input:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgb(132, 0, 255, 0.8);
+}
+
+fieldset {
+    border: solid 1px lightgray;
+    padding: 1rem;
+    border-radius: .8rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+fieldset legend {
+    font-weight: 600;
+    font-size: 0.8rem;
+    padding: .2rem .5rem .3rem .5rem;
+    color: white;
+    background-color: #5e50da;
+    border-radius: .4rem;
+}
+
+.datos-color {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    align-items: center;
+}
+.color-contenedor, .radio-contenedor {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+.habilidad-contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.datos-radio {
+    padding: .3rem .6rem .4rem .6rem;
+    background-color: white;
+    border-radius: .5rem;
+    border: solid 1px lightgray;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.datos-habilidad {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+.datos-habilidad label {
+    width: 6rem;
+    color: black;
+}
+.datos-habilidad input {
+    flex: 1;
+}
+
+#contenedor {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+#form-personaje {
+    min-width: 400px;
+    max-width: 420px;
+    color: black;
+    flex: 1;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255, 0.4);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(1rem);
+    border: solid 1px;
+    border-top-color: rgba(231, 151, 255, 0.4);
+    border-bottom-color: rgb(231, 151, 255, 0.3);
+    border-left-color: rgb(231, 151, 255, 0.4);
+    border-right-color: rgb(231, 151, 255, 0.3);
+    border-radius: .5rem;
+}
+
+#form-descripcion {
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-top: .1rem;
+    margin-bottom: 1.2rem;
+    color: rgb(236, 236, 236);
+    background-color: #4b17da;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    border-radius: .4rem;
+    padding: .4rem;
+}
+
+#contenedor-personaje {
+    max-width: 560px;
+}
+
+#personaje-3d {
+    width: 100%;
+    height: 100%;
+}
+
+/* media querys */
+@media (max-width: 768px) {
+
+    #contenedor {
+        flex-direction: column;
+    }
+
+    #form-personaje {
+        min-width: auto;
+        max-width: 100%;
+    }
+
+    #contenedor-personaje {
+        max-width: 100%;
+        height: 300px;
+    }
+
+    #personaje-3d {
+        aspect-ratio: 1 / 1;
+    }
+}

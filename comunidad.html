@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comunidad</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/comunidad.css" />
+    <!-- Personaje 3D -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="contenedor-menu" role="navigation">
+            <a href="index.html">Inicio</a>
+            <a href="creador.html">Creador</a>
+            <a href="comunidad.html" class="seleccionado">Comunidad</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section id="section-comunidad" aria-labelledby="titulo">
+            <h2 id="titulo">Personajes de la comunidad</h2>
+            <h3 id="subtitulo">Explora los personajes creados por otros usuarios.</h3>
+
+            <div class="cargar-contenedor">
+                <input type="file" id="archivo-xml" accept=".xml"/>
+                
+                <button class="comunidad" onclick="cargarComunidad()">Cargar comunidad</button>
+                <button onclick="cargarArchivo()">Cargar mi personaje</button>
+            </div>
+            <div class="tabla-responsiva">
+                <p id="desc-tabla-personajes" class="sr-only">
+                    Esta tabla muestra los personajes creados por la comunidad, incluyendo autor, nombre, clase, género, apariencia y habilidades.
+                </p>
+                <table id="tabla-personajes" aria-describedby="desc-tabla-personajes">
+                    <caption class="sr-only">Tabla de personajes de la comunidad</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Autor</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Clase</th>
+                            <th scope="col">Género</th>
+                            <th scope="col">Apariencia</th>
+                            <th scope="col">Habilidades</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaPersonajes"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Héroes y Leyendas. Todos los derechos reservados.</p>
+        <p>Desarrollado por <a href="https://github.com/iAngelGuzman">José Ángel Guzmán Zavaleta</a></p>
+    </footer>
+    
+    <script src="js/comunidad.js"></script>
+</body>
+</html>

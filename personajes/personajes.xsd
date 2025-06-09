@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="personajes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="personaje" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Nombre del autor -->
+                            <xs:element name="autor" type="xs:string" />
+                            <!-- Nombre del personaje -->
+                            <xs:element name="nombre" type="xs:string" />
+                            <!-- Género del personaje -->
+                            <xs:element name="genero">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Masculino" />
+                                        <xs:enumeration value="Femenino" />
+                                        <xs:enumeration value="Otro" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <!-- Clase del personaje -->
+                            <xs:element name="clase">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Arquero"/>
+                                        <xs:enumeration value="Guerrero"/>
+                                        <xs:enumeration value="Mago"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <!-- Apariencia del personaje -->
+                            <xs:element name="apariencia">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="cabello" type="xs:string" />
+                                        <xs:element name="piel" type="xs:string" />
+                                        <xs:element name="ojos" type="xs:string" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <!-- Habilidades del personaje -->
+                            <xs:element name="habilidades">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="agilidad" type="xs:integer" />
+                                        <xs:element name="fuerza" type="xs:integer" />
+                                        <xs:element name="inteligencia" type="xs:integer" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

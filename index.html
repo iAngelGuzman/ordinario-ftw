@@ -1,22 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Héroes y Leyendas</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/inicio.css" />
+    <!-- Personaje 3D -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
+
 <body>
-    <div class="">
-        <div class="titulo">Kahoot! 2</div>
-        <form class="form-codigo">
-            <div class="input-codigo">
-                <label for="codigo">Código</label>
-                <input type="text" id="codigo" name="codigo">
+    <header>
+        <nav class="contenedor-menu" role="navigation">
+            <a href="index.html" class="seleccionado">Inicio</a>
+            <a href="creador.html">Creador</a>
+            <a href="comunidad.html">Comunidad</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section id="heroes-y-leyendas" aria-labelledby="principal" aria-describedby="subtitulo">
+            <h1 id="principal">Héroes y Leyendas</h1>
+            <h2 id="subtitulo">"Tu imaginación, tu héroe, tu leyenda"</h2>
+            <div class="tarjeta">
+                <p>¡Bienvenid@ a Héroes y Leyendas! Aquí encontrarás una colección de personajes inspirados por los héroes y leyendas de la historia. Cada personaje tiene una historia, habilidades y apariencia que lo hace único y distintivo. ¡Explora y disfruta de tus propios héroes y leyendas!</p>
             </div>
-            <button class="boton-enviar">Ingresar</button>
-        </form>
-    </div>
+            <div class="botones" role="navigation">
+                <button class="comunidad" onclick="location.href='comunidad.html'">Explora la comunidad</button>
+                <button onclick="location.href='creador.html'">Crea tu propio personaje</button>
+            </div>
+
+            <h3 class="clases">Selecciona entre diferentes clases</h3>
+            <div class="imagenes">
+                <figure>
+                    <img src="img/arquera.jpg" alt="Clase Arquero">
+                    <figcaption>Arquero</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/guerrero.jpg" alt="Clase Guerrero">
+                    <figcaption>Guerrero</figcaption>
+                </figure>
+                <figure>
+                    <img src="img/mago.jpg" alt="Clase Mago">
+                    <figcaption>Mago</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <h3 class="clases">Proximamente...</h3>
+        <!-- Personaje -->
+        <div id="contenedor-personaje" aria-describedby="desc-personaje-3d">
+            <p id="desc-personaje-3d" class="sr-only">
+                Este es un personaje 3D que representa a un astronauta, con la capacidad de rotar automáticamente y controles de cámara.
+            </p>
+            <model-viewer id="personaje-3d" src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                alt="Personaje 3D" auto-rotate camera-controls>
+            </model-viewer>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Héroes y Leyendas. Todos los derechos reservados.</p>
+        <p>Desarrollado por <a href="https://github.com/iAngelGuzman">José Ángel Guzmán Zavaleta</a></p>
+    </footer>
+
     <script src="js/scripts.js"></script>
 </body>
 </html>

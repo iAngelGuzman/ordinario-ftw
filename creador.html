@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creador</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/creador.css" />
+    <!-- Personaje 3D -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="contenedor-menu" role="navigation">
+            <a href="index.html">Inicio</a>
+            <a href="creador.html" class="seleccionado">Creador</a>
+            <a href="comunidad.html">Comunidad</a>
+        </nav>
+    </header>
+
+    <main role="main">
+        <section aria-labelledby="titulo">
+            <h2 id="titulo">Creador de Personaje</h2>
+            <p id="desc-contenedor-formulario" class="sr-only">
+                Este formulario es para crear tu personaje, incluye los atributos nombre del autor, nombre del personaje, clase, género, apariencia y habilidades.
+            </p>
+            <div id="contenedor" aria-describedby="desc-contenedor-formulario">
+                <!-- Formulario -->
+                <form id="form-personaje" aria-describedby="form-descripcion">
+                    <p id="form-descripcion">Completa todos los campos para guardar tu personaje.</p>
+
+                    <div class="datos-nombre">
+                        <label for="autor">Nombre del autor</label>
+                        <input id="autor" name="autor" placeholder="Ingresa tu nombre..." required aria-required="true" />
+                    </div>
+
+                    <div class="datos-nombre">
+                        <label for="nombre">Nombre del personaje</label>
+                        <input id="nombre" name="nombre" placeholder="Ingresa el personaje..." required aria-required="true" />
+                    </div>
+
+                    <div class="datos-clase">
+                        <label for="clase">Clase</label>
+                        <select id="clase" name="clase" required aria-required="true" aria-describedby="ayuda-clase">
+                            <option value="" disabled selected>Selecciona una clase</option>
+                            <option value="Arquero">Arquero</option>
+                            <option value="Guerrero">Guerrero</option>
+                            <option value="Mago">Mago</option>
+                        </select>
+                        <span id="ayuda-clase" class="sr-only">Elige la clase de tu personaje: Arquero, Guerrero o Mago.</span>
+                    </div>
+
+                    <fieldset class="datos">
+                        <legend>Género</legend>
+                        <div class="radio-contenedor">
+                            <div class="datos-radio">
+                                <input type="radio" name="genero" id="genero-masculino" value="Masculino" checked/>
+                                <label for="genero-masculino">Masculino</label>
+                            </div>
+                            <div class="datos-radio">
+                                <input type="radio" name="genero" id="genero-femenino" value="Femenino" />
+                                <label for="genero-femenino">Femenino</label>
+                            </div>
+                            <div class="datos-radio">
+                                <input type="radio" name="genero" id="genero-otro" value="Otro" />
+                                <label for="genero-otro">Otro</label>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="datos">
+                        <legend>Apariencia</legend>
+                        <div class="color-contenedor">
+                            <div class="datos-color">
+                                <label for="cabello">Cabello</label>
+                                <input type="color" id="cabello" name="cabello" aria-label="Color del cabello">
+                            </div>
+                            <div class="datos-color">
+                                <label for="piel">Piel</label>
+                                <input type="color" id="piel" name="piel" aria-label="Color de la piel">
+                            </div>
+                            <div class="datos-color">
+                                <label for="ojos">Ojos</label>
+                                <input type="color" id="ojos" name="ojos" aria-label="Color de los ojos">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="datos">
+                        <legend>Habilidades</legend>
+                        <div class="habilidad-contenedor">
+                            <div class="datos-habilidad">
+                                <label for="agilidad">Agilidad</label>
+                                <input id="agilidad" name="agilidad" type="range" min="1" max="10" value="5" aria-valuemin="1" aria-valuemax="10" aria-valuenow="5" />
+                            </div>
+                            <div class="datos-habilidad">
+                                <label for="fuerza">Fuerza</label>
+                                <input id="fuerza" name="fuerza" type="range" min="1" max="10" value="5" aria-valuemin="1" aria-valuemax="10" aria-valuenow="5" />
+                            </div>
+                            <div class="datos-habilidad">
+                                <label for="inteligencia">Inteligencia</label>
+                                <input id="inteligencia" name="inteligencia" type="range" min="1" max="10" value="5" aria-valuemin="1" aria-valuemax="10" aria-valuenow="5" />
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <button type="submit">Guardar Personaje</button>
+                </form>
+                <!-- Personaje -->
+                <!-- <div id="contenedor-personaje">
+                    <model-viewer id="personaje-3d" src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+                        alt="Personaje 3D" auto-rotate camera-controls>
+                    </model-viewer>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Héroes y Leyendas. Todos los derechos reservados.</p>
+        <p>Desarrollado por <a href="https://github.com/iAngelGuzman">José Ángel Guzmán Zavaleta</a></p>
+    </footer>
+
+    <script src="js/creador.js"></script>
+</body>
+
+</html>

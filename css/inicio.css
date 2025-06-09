@@ -1,0 +1,110 @@
+#principal {
+    margin-bottom: 0;
+}
+#subtitulo {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+}
+
+.clases {
+    margin-top: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0;
+}
+
+#heroes-y-leyendas {
+    padding-top: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tarjeta {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1.2rem;
+    border-radius: .8rem;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 2rem;
+}
+p {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+.comunidad {
+    background-color: #bb1afa;
+    border: solid 1px #76129e;
+    box-shadow: 0 3px 0px 0px #76129e;
+}
+.comunidad:hover {
+  background: #c33df8;
+}
+
+.imagenes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.4rem;
+    gap: 1.6rem;
+}
+figure {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(33, 2, 70, 0.8);
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease-in-out;
+}
+figure:hover {
+    transform: scale(1.04);
+    box-shadow: 0 2px 16px rgba(212, 0, 255, 0.8);
+}
+figure img {
+    width: 10rem;
+    height: auto;
+}
+figcaption {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.3rem 0 0.5rem 0;
+}
+
+#contenedor-personaje {
+    margin: 0 auto;
+    max-width: 560px;
+    height: 500px;
+    flex: 1;
+}
+
+#personaje-3d {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    #principal {
+        font-size: 2.5rem;
+    }
+    #subtitulo {
+        font-size: 1.2rem;
+    }
+    .botones {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    .imagenes {
+        gap: 1rem;
+    }
+}

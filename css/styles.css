@@ -2,7 +2,8 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: .02rem;
 }
 
 body {
@@ -10,60 +11,116 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.titulo {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    color: white;
-    text-align: center;
-}
-
-.form-codigo {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 500px;
-    height: 500px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
 }
 
-.input-codigo {
+header {
+    text-align: center;
+    padding: 1rem;
+}
+.contenedor-menu {
+    width: fit-content;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 500px;
-    height: 500px;
+    justify-content: space-around;
+    gap: 1.5rem;
+    background-color: rgba(246, 240, 255, 0.8);
+    padding: .6rem 1.8rem;
+    border-radius: .8rem;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+.contenedor-menu a {
+    text-decoration: none;
+    color: #4a148c;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    border-bottom: solid 2px;
+    border-bottom-color: transparent;
+    padding-bottom: 0.3rem;
+    letter-spacing: 0.04rem;
+    font-size: 1rem;
+}
+.contenedor-menu a:hover, .contenedor-menu a.seleccionado {
+    color: #8c00ff;
+    border-bottom-color: #8c00ff;
+    font-weight: 700;
 }
 
-.input-codigo label {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color: white;
+main {
+    padding: 2rem;
+    padding-top: .6rem;
     text-align: center;
+    flex: 1;
 }
 
-.input-codigo input {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+#principal {
+    font-size: 3rem;
     color: white;
-    text-align: center;
-    border: none;
-    border-bottom: 2px solid white;
-    width: 500px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+#titulo {
+    font-size: 2rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
 }
 
-.boton-enviar {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+#subtitulo {
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
+}
+
+button {
+    width: 100%;
+    background-color: #614df8;
+    color: white;
+    border: solid 1px #4f3ed3;
+    box-shadow: 0 3px 0px 0px #4333bb;
+    padding: 0.8rem 1rem;
+    font-weight: bold;
+    border-radius: .8rem;
+    cursor: pointer;
+    font-size: .9rem;
+    transition: all 0.2s ease-in-out;
+}
+button:hover {
+  background: #7e6dfa;
+  transform: scale(1.02);
+}
+
+footer {
+    width: 100%;
     text-align: center;
-    border: none;
-    background-color: white;
-    width: 500px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
+}
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+footer a {
+    color: #c99aff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
 }
