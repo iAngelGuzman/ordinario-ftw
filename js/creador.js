@@ -12,6 +12,25 @@ document.getElementById("form-personaje").addEventListener("submit", function (e
     const fuerza = document.getElementById("fuerza").value;
     const inteligencia = document.getElementById("inteligencia").value;
     const agilidad = document.getElementById("agilidad").value;
+    
+    const mensaje = document.getElementById('mensaje-accesibilidad');
+
+    // Validamos los campos
+    if (autor === "") {
+        mensaje.textContent = "El nombre del autor no puede estar vacío.";
+        alert("Por favor, completa todos los campos obligatorios.");
+        return;
+    }
+    if (nombre === "") {
+        mensaje.textContent = "El nombre del personaje no puede estar vacío.";
+        alert("Por favor, completa todos los campos obligatorios.");
+        return;
+    }
+    if (clase === "") {
+        mensaje.textContent = "La clase del personaje no puede estar vacía.";
+        alert("Por favor, completa todos los campos obligatorios.");
+        return;
+    }
 
     // Creamos el XML
     const xml = `

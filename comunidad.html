@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Comunidad</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Estilos -->
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/comunidad.css" />
     <!-- Personaje 3D -->
@@ -15,7 +17,8 @@
 
 <body>
     <header>
-        <nav class="contenedor-menu" role="navigation">
+        <p id="desc-navegacion" class="sr-only">Menu de navegacion con enlaces a inicio, creador y comunidad.</p>
+        <nav class="contenedor-menu" role="navigation" aria-describedby="desc-navegacion">
             <a href="index.html">Inicio</a>
             <a href="creador.html">Creador</a>
             <a href="comunidad.html" class="seleccionado">Comunidad</a>

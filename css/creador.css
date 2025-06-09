@@ -2,7 +2,7 @@ input, select {
     border-radius: .5rem;
     border: solid 1px lightgrey;
     box-shadow: 0 0 2px rgb(0, 0, 0, 0.2);
-    padding: 0.5rem;
+    padding: 0.5rem 0;
     color: black;
     letter-spacing: 0.02rem;
     font-size: .9rem;

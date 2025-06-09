@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Creador</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Estilos -->
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/creador.css" />
     <!-- Personaje 3D -->
@@ -13,7 +15,8 @@
 
 <body>
     <header>
-        <nav class="contenedor-menu" role="navigation">
+        <p id="desc-navegacion" class="sr-only">Menu de navegacion con enlaces a inicio, creador y comunidad.</p>
+        <nav class="contenedor-menu" role="navigation" aria-describedby="desc-navegacion">
             <a href="index.html">Inicio</a>
             <a href="creador.html" class="seleccionado">Creador</a>
             <a href="comunidad.html">Comunidad</a>
@@ -43,20 +46,21 @@
 
                     <div class="datos-clase">
                         <label for="clase">Clase</label>
-                        <select id="clase" name="clase" required aria-required="true" aria-describedby="ayuda-clase">
-                            <option value="" disabled selected>Selecciona una clase</option>
+                        <span id="ayuda-clase" class="sr-only">Elige la clase de tu personaje: Arquero, Guerrero o Mago. Utiliza la tecla C para seleccionar.</span>
+                        <select id="clase" name="clase" required aria-required="true" aria-describedby="ayuda-clase" accesskey="c">
+                            <option value="" disabled hidden>Selecciona una clase</option>
                             <option value="Arquero">Arquero</option>
                             <option value="Guerrero">Guerrero</option>
                             <option value="Mago">Mago</option>
                         </select>
-                        <span id="ayuda-clase" class="sr-only">Elige la clase de tu personaje: Arquero, Guerrero o Mago.</span>
                     </div>
 
                     <fieldset class="datos">
                         <legend>Género</legend>
-                        <div class="radio-contenedor">
+                        <p id="ayuda-genero" class="sr-only">Selecciona el genero de tu personaje.</p>
+                        <div class="radio-contenedor" aria-describedby="ayuda-genero">
                             <div class="datos-radio">
-                                <input type="radio" name="genero" id="genero-masculino" value="Masculino" checked/>
+                                <input type="radio" name="genero" id="genero-masculino" value="Masculino" checked aria-checked="true" />
                                 <label for="genero-masculino">Masculino</label>
                             </div>
                             <div class="datos-radio">
@@ -93,21 +97,24 @@
                         <div class="habilidad-contenedor">
                             <div class="datos-habilidad">
                                 <label for="agilidad">Agilidad</label>
-                                <input id="agilidad" name="agilidad" type="range" min="1" max="10" value="5" aria-valuemin="1" aria-valuemax="10" aria-valuenow="5" />
+                                <input id="agilidad" name="agilidad" type="range" min="1" max="10" value="5" />
                             </div>
                             <div class="datos-habilidad">
                                 <label for="fuerza">Fuerza</label>
-                                <input id="fuerza" name="fuerza" type="range" min="1" max="10" value="5" aria-valuemin="1" aria-valuemax="10" aria-valuenow="5" />
+                                <input id="fuerza" name="fuerza" type="range" min="1" max="10" value="5" />
                             </div>
                             <div class="datos-habilidad">
                                 <label for="inteligencia">Inteligencia</label>
-                                <input id="inteligencia" name="inteligencia" type="range" min="1" max="10" value="5" aria-valuemin="1" aria-valuemax="10" aria-valuenow="5" />
+                                <input id="inteligencia" name="inteligencia" type="range" min="1" max="10" value="5" />
                             </div>
                         </div>
                     </fieldset>
 
                     <button type="submit">Guardar Personaje</button>
                 </form>
+                <!-- Contenedor para mensajes dinámicos -->
+                <div id="mensaje-accesibilidad" class="sr-only" aria-live="polite"></div>
+
                 <!-- Personaje -->
                 <!-- <div id="contenedor-personaje">
                     <model-viewer id="personaje-3d" src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
